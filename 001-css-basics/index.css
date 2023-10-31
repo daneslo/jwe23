@@ -1,0 +1,29 @@
+.wrapper {
+    background-color: rgb(227, 0, 15); /* rgb */
+    background-color: #e3000f; /* hex */
+    background-color: yellow; /* keywords*/
+}
+
+.default {
+    background-color: rgb(255, 0, 0);
+    border: none;
+    padding: 10px;
+}
+
+.outline {
+    border: 2px solid #e3000f;
+    background-color: transparent;
+}
+#cta {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 25%;
+    box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 1);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}

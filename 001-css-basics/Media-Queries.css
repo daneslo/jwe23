@@ -1,0 +1,18 @@
+.artikel-1 {
+    background-color: deeppink;
+    border: 2px solid blue;
+}
+.artikel-2 {
+    background-color: pink;
+    border: 2px solid blue;
+}
+.artikel-3 {
+    background-color: blueviolet;
+    border: 2px solid blue;
+}
+
+@media (min-width: 768px) {
+    section {
+        display: flex;
+    }
+}
