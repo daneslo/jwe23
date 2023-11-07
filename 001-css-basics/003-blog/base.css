@@ -1,0 +1,71 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors: */
+    --grey: #969696;
+    --light-grey: #dddddd;
+    --red: #e74149;
+
+    --unnamed-font-family-segoe-ui: Segoe UI;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-900: 900px;
+    --unnamed-font-weight-bold: bold;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-size-12: 12px;
+    --unnamed-font-size-16: 16px;
+    --unnamed-font-size-18: 18px;
+    --unnamed-font-size-24: 24px;
+    --unnamed-font-size-36: 36px;
+    --unnamed-character-spacing-0: 0px;
+    --unnamed-line-spacing-24: 24px;
+    --unnamed-line-spacing-33: 33px;
+    --unnamed-line-spacing-54: 54px;
+}
+
+#main-header {
+    background-image: url(img/blog-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /*50vh sind 50% der verfugbaren viewport höhe*/
+    min-height: 75vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+/* nur .container klassen innerhalb des #main-header*/
+#main-header .container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0;
+}
+#main-header .container:last-child {
+    flex-flow: column;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+button.cta {
+    background-color: var(--red);
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+    /*css code fur viewports gröser/gleich */
+}
+@media (min-width: 1200px) {
+}
