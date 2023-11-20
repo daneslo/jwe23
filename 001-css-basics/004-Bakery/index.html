@@ -3,104 +3,126 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>index</title>
+        <title> Home</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <div class="wrapper">
-            <header id="main-header" class="container">
-                <div class="row h-space">
+            <header id="main-header">
+                <div class="row h-space inner-wrapper">
                     <div id="logo">
-                        <img src="img/Logo-placeholder.png" alt="" />
+                        <a href="index.html"></a>
+                        <img 
+                        src="img/Logo-placeholder.png" alt="Logo Bakery"/>
+                       </a>
                     </div>
+
                     <nav>
-                        <a href="#">
-                            <img src="img/nav.svg" />
+                       <a href="#">
+                            <img src="img/nav.svg" alt=""/>
                         </a>
                     </nav>
                 </div>
 
-                
+                <div class="row">
                     <div id="hero">
-                        
-                            <img
-                            id="hero-image"
-                                src="img/pexels-klaus-nielsen-6287298_large-jpg"
+                        <picture>
+                            <source
+                                media="(min-width: 420px)"
+                                srcset="img/content/full/teaser1.jpg"
+                                
                             />
+                            <source
+                                media="(min-width: 1300px)"
+                                srcset="img/content/full/teaser1.jpg"
+                            />
+
+                            <img
+                                src="img/content/full/teaser1.jpg"
+                                alt=""
+                            />
+                        </picture>
                         
-                        <img
-                            id="siegel"
-                            src="img/qualitaetssiegel-goldene-eichel_300.png"
-                        />
                     </div>
+                </div>
+                <div class="row inner-wrapper">
+                    <img
+                        id="siegel"
+                        src="img/qualitaetssiegel-goldene-eichel_300.png"
+                        alt=""
+                    />
                 </div>
             </header>
 
             <main>
-             <section div class="container">
-                <div class="sortiment">
-                    <div class="items inner-wrapper">
+             <section class="sortiment">
+                <header class="inner-wrapper">
 
                         <h1>UNSER SORTIMENT</h1>
-                    
+                 </header>
+                 
+                 <div class="items inner-wrapper">
+                    <article>
+                        <img
+                            src="./img/content/full/column-item-image1.jpg"
+                            alt=""
+                        />
+                    </article>
+                    <article>
+                        <img
+                            src="img/content/full/column-item-image2.jpg"
+                            alt=""
+                        />
+                    </article>
+                    <article>
+                        <img
+                            src="img/content/full/column-item-image3.jpg"
+                            alt=""
+                        />
+                    </article>
+                    <article>
+                        <img
+                            src="img/content/full/column-item-image4.jpg"
+                            alt=""
+                        />
+                    </article>
+                </div>
 
-                        <article> 
-                            <img
-                                src="img/pexels-maria-orlova-4913487.jpg"
-                            />
-                        
-                            <img
-                                src="img/pexels-maria-orlova-4913487.jpg"
-                                alt=""
-                            />
-                        
-                            <img
-                                src="img/pexels-maria-orlova-4913487.jpg"
-                                alt=""
-                            />
-                        
-                            <img
-                                src="img/pexels-maria-orlova-4913487.jpg"
-                                alt=""
-                            />
-                        </article>
-                        
 
-                        <div class="text">
+                        <div class="text inner-wrapper">
                             <p>Lorem ipsum dolor sit amet consectetur elite.</p>
 
+                        <a class="button" href="Kontak.html">BESTELLUNG AUFGEBEN</a>
                         </div>
-
-                        <a class="button" href="Kontak.html">BESTELLUNG AUFNEHMEN</a>
-                    </div>
-                </div>
-             </section>
+              </section>
             </main>
+
             <footer id="main-footer">
                 <div class="inner-wrapper">
                     <address>
-                        Bakery GmbH<br />
-                        Salzburger straße 55<br />
-                        5620 Schwarzach<br />
-                        Österreich<br />
-                        Tel.0123 123 123 53<br />
-                        Email: bakerx@mail.com
+                        <span>Bakery GmbH</span>
+                        <span>Salzburgerstraße 55</span>
+                        <span>5620 Schwarzach</span>
+                        <span>Österreich</span>
+                        <br />
+                        <span>Tel. +43 6415 422 42 80</span>
+                        <span>E-Mail: bakery@example.com</span>
                     </address>
                     <nav>
                         <ul>
-                            <li><a href="#">Über Uns</a></li>
+                            <li><a href="über-uns.html">Über Uns</a></li>
                             <li><a href="team.html"></a>Unser Team</li>
-                            <li><a href="Galerie.html"></a>Galerie</li>
+                            <li><a href="index.html"></a>GalLerie</li>
                             <li><a href="Kontak.html"></a>Kontak</li>
                             <li><a href="Impressum.html"></a>Impressum</li>
-                            <li><a href=""></a>Datenschutz & Cookies</li>
+                            <li><a href="Datenschutz.html">Datenschutz &amp; Cookies</a>
+                            </li>
                         </ul>
                     </nav>
                     <div id="end">
-                        <div class="inner-wrapper"></div>
-                        &copy;© 2018 Bakery | copyright
+                        <p>&copy;© 2018 Bakery | copyright</p>
                     </div>
-                </div>
+                
             </footer>
         </div>
     </body>
