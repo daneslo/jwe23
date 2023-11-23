@@ -1,121 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .menu {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-        
-
-        }
-        .menu a {
-            text-decoration: none;
-            color:var(--grey);
-            transition: all 0.3s ease;
-            display: block;
-            padding: 8px;
-        }
-        .navbar-item {
-            float: left;
-        }
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Team</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            @media (min-width: 768px) {
+                .member {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: space-around;
+                    gap: 50px;
+                }
+                .member:nth-child(2n) {
+                    flex-flow: row-reverse;
+                }
+                .member img {
+                    width: 320px;
+                    flex-basis: 320px;
+                    flex-grow: 420px;
+                    flex-shrink: 220px;
+                }
+                
+                
+                .member p {
+                    align-self: center;
+                    text-align: right;
+                    flex-shrink: 120px;
+                    flex-basis: auto;
+                }
+                .member:nth-child(2n) p {
+                    text-align: left;
+                }
+            }
         </style>
-</head>
-<body>
-    <div class="wrapper">
-        <header id="main-header">
-            <div class="row h-space inner-wrapper">
-                <div id="logo">
-                    <img src="img/Logo-placeholder.png" alt="" />
-                </div>
-                <div>
-                    <ul class="menu">
-                        <li class="navbar-item">
-                            <a href="./über-uns.html">Über uns</a>
-                        </li>
-                        <li class="navbar-item">
-                            <a href="./team.html">Unser Team</a>
-                        </li>
-                        <li class="navbar-item">
-                            <a href="./index.html">Gallerie</a>
-                        </li>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header id="main-header">
+                <div class="row h-space inner-wrapper">
+                    <div id="logo">
+                        <img src="img/Logo-placeholder.png" alt="" />
+                    </div>
+                    <div>
+                        <nav>
+                            <ul class="menu">
+                                <li class="navbar-item">
+                                    <a href="./über-uns.html">Über uns</a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a href="./team.html">Unser Team</a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a href="./index.html">Gallerie</a>
+                                </li>
 
-                        <li class="navbar-item"></li>
-                        <a href="./Kontak.html">Kontak</a>
-                    </ul>
+                                <li class="navbar-item">
+                                    <a href="./Kontak.html">Kontak</a>
+                                </li>
+                            </ul>
+                            <a href="#" id="burger">
+                                <img src="img/nav.svg" alt="" />
+                            </a>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div id="hero">
-                    <picture>
-                        <source
-                            media="(min-width: 420px)"
-                            srcset="img/content/full/Copy-of-Unnamed-Design.png"
+                <div class="row">
+                    <div id="hero">
+                        <picture>
+                            <source
+                                media="(min-width: 420px)"
+                                srcset="
+                                    img/content/full/Copy-of-Unnamed-Design.png
+                                "
+                            />
+                            <source
+                                media="(min-width: 1300px)"
+                                srcset="
+                                    img/content/full/Copy-of-Unnamed-Design.png
+                                "
+                            />
+
+                            <img
+                                src="img/content/full/Copy-of-Unnamed-Design.png"
+                                alt=""
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section class="sortiment">
+                    <header class="inner-wrapper">
+                        <h1>Unser Team</h1>
+                    </header>
+                    <div class="members inner-wrapper">
+                        <div class="member">
+                            <p>Unseren Bakery mitarbeiter</p>
+                            <img
+                                src="img/content/full/360_F_266717659_Md40mAJcANevB1wHqm4wCWtCYQHDIkcU.jpg"
+                                alt=""
+                            />
+                        </div>
+
+                        <div class="member">
+                            <p>Alexander Putz<br />CEO</p>
+                            <img src="img/content/full/vicent.webp" alt="" />
                             
-                        />
-                        <source
-                            media="(min-width: 1300px)"
-                            srcset="img/content/full/Copy-of-Unnamed-Design.png"
-                        />
-
-                        <img
-                            src="img/content/full/Copy-of-Unnamed-Design.png"
-                            alt=""
-                        />
-                    </picture>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer id="main-footer">
+                <div class="inner-wrapper">
+                    <address>
+                        <span>Bakery GmbH</span>
+                        <span>Salzburgerstraße 55</span>
+                        <span>5620 Schwarzach</span>
+                        <span>Österreich</span>
+                        <br />
+                        <span>Tel. +43 6415 422 42 80</span>
+                        <span>E-Mail: bakery@example.com</span>
+                    </address>
+                    <nav>
+                        <ul>
+                            <li><a href="über-uns.html">Über Uns</a></li>
+                            <li><a href="team.html"></a>Unser Team</li>
+                            <li><a href="index.html"></a>Gallerie</li>
+                            <li><a href="Kontak.html"></a>Kontak</li>
+                            <li><a href="Impressum.html"></a>Impressum</li>
+                            <li><a href=""></a>Datenschutz & Cookies</li>
+                        </ul>
+                    </nav>
+                    <div id="end">
+                        <div class="inner-wrapper"></div>
+                        &copy;© 2018 Bakery | copyright
+                    </div>
                 </div>
-            </div>
-        </header>
-        <main>
-            <div class="inner-wrapper">
-                <h1>Unser Team</h1>
-                <article class="artikel-1">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, aspernatur?<br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae quibusdam cum doloremque laboriosam atque. Ad ducimus voluptatum enim voluptate.</p>
-                    <img src="img/content/full/360_F_266717659_Md40mAJcANevB1wHqm4wCWtCYQHDIkcU.jpg" alt="">
-
-                </article>
-                <article class="artikel-2"> 
-                    <img src="img/content/full/vicent.webp" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, a!<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facilis cumque, maxime blanditiis sit itaque ea. Velit adipisci provident ex?</p>
-
-                </article>
-
-            </div>
-        </main>
-        <footer id="main-footer">
-            <div class="inner-wrapper">
-                <address>
-                    <span>Bakery GmbH</span>
-                    <span>Salzburgerstraße 55</span>
-                    <span>5620 Schwarzach</span>
-                    <span>Österreich</span>
-                    <br />
-                    <span>Tel. +43 6415 422 42 80</span>
-                    <span>E-Mail: bakery@example.com</span>
-                </address>
-                <nav>
-                    <ul>
-                        <li><a href="über-uns.html">Über Uns</a></li>
-                        <li><a href="team.html"></a>Unser Team</li>
-                        <li><a href="index.html"></a>Gallerie</li>
-                        <li><a href="Kontak.html"></a>Kontak</li>
-                        <li><a href="Impressum.html"></a>Impressum</li>
-                        <li><a href=""></a>Datenschutz & Cookies</li>
-                    </ul>
-                </nav>
-                <div id="end">
-                    <div class="inner-wrapper"></div>
-                    &copy;© 2018 Bakery | copyright
-                </div>
-            </div>
-        </footer>
-    </div>
-</body>
+            </footer>
+        </div>
+    </body>
 </html>

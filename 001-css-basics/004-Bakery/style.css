@@ -70,6 +70,17 @@ img {
 #logo img {
     width: 170px;
 }
+.menu {
+    display: none;
+}
+.menu a {
+    text-decoration: none;
+    color: var(--grey);
+    transition: all 0.3s ease;
+    padding: 8px;
+    text-align: right;
+}
+       
 
 #hero img {
     width: 100%;
@@ -156,6 +167,30 @@ section .sortiment .text {
         object-fit: cover;
         object-position: cover;
     }
+    .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        font-weight: bold;
+
+    }
+    #burger {
+        display: none;
+    }
+    #main-header .inner-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .row .inner-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    header .inner-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
     section .sortiment .items {
         flex-flow: row;
     }
@@ -186,7 +221,11 @@ section .sortiment .text {
         font-size: 40px;
         text-transform: uppercase;
     }
+    
+    
+    
 }
+
 
 @media (min-width: 1200px) {
 }

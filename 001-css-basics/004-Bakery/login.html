@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width, initial-scale=1.0" />
+        <title>Login</title>
+        <style>
+            html,
+            body {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background-color: lightgrey;
+            }
+
+            h1 {
+                text-align: center;
+            }
+            section .login {
+                display: flex;
+                justify-content: center;
+            }
+
+            .login form {
+                background-color: white;
+                border: 1px solid black;
+                padding: 30px;
+            }
+            input[type="text"],
+            select {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 6px;
+                box-sizing: border-box;
+            }
+            input[type="password"],
+            select {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 6px;
+                box-sizing: border-box;
+            }
+            input[type="submit"] {
+                width: 30%;
+                background-color: blue;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: greenyellow;
+            }
+            @media (min-width: 768) {
+                section .login {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper container">
+            <header>
+                <h1>Secret Login Area</h1>
+            </header>
+            <main>
+                <section class="login container">
+                    <form
+                        action="https://jwe.obinet.at/login.php?key=wifi2023"
+                        method="post"
+                        class="container p-3"
+                    >
+                        <div>
+                            <label for="Benutzer oder E-mail Adresse"
+                                >Benutzer oder E-mail Adresse<br
+                            /></label>
+                            <input
+                                type="text"
+                                id="Benutzer"
+                                name="Benutzer"
+                                class="form-control"
+                            />
+                        </div>
+                        <div>
+                            <label for="Password">Password <br /></label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-control"
+                            />
+                        </div>
+                        <input type="submit" value="Submit" />
+                    </form>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

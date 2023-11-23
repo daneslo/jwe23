@@ -1,29 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kontak</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style.css">
         <style>
-            .menu {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-            }
-            .menu a {
-                text-decoration: none;
-                color: var(--grey);
-                transition: all 0.3s ease;
-                display: block;
-                padding: 8px;
-                text-align: right;
-            }
-
-            .navbar-item {
-                float: left;
-            }
+            
             p {
                 font-size: 25px;
                 font-weight: 300;
@@ -37,7 +20,7 @@
             }
             input[type="text"],
             select {
-                width: 50%;
+                width: 100%;
                 padding: 12px 20px;
                 margin: 8px 0;
                 display: inline-block;
@@ -47,7 +30,7 @@
             }
             input[type="email"],
             select {
-                width: 50%;
+                width: 100%;
                 padding: 12px 20px;
                 margin: 8px 0;
                 display: inline-block;
@@ -57,7 +40,7 @@
             }
             input[type="date"],
             select {
-                width: 50%;
+                width: 100%;
                 padding: 12px 20px;
                 margin: 8px 0;
                 display: inline-block;
@@ -67,7 +50,7 @@
             }
 
             input[type="submit"] {
-                width: 25%;
+                width: 50%;
                 background-color: var(--gold);
                 color: white;
                 padding: 14px 20px;
@@ -93,13 +76,33 @@
             }
             .container img {
                 width: 100%;
-                height: auto;
             }
-            #main address span {
+            .adresse {
                 color: var(--grey);
-                display: block;
                 text-align: right;
+                
             }
+            @media (min-width:768px){
+                
+            
+                .main .inner-wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                #Formular {
+                    display: flex;
+
+                }
+                .adresse {
+                    display:block;
+                    
+                }
+                .container .inner-wrapper{
+                    display: flex;
+                }
+            }
+            
+            
         </style>
     </head>
     <body>
@@ -107,9 +110,10 @@
             <header id="main-header">
                 <div class="row h-space inner-wrapper">
                     <div id="logo">
-                        <img src="img/Logo-placeholder.png" alt="" />
+                        <img src="img/Logo-placeholder.png" alt="">
                     </div>
                     <div>
+                        <nav>
                         <ul class="menu">
                             <li class="navbar-item">
                                 <a href="./über-uns.html">Über uns</a>
@@ -121,27 +125,35 @@
                                 <a href="./index.html">Gallerie</a>
                             </li>
 
-                            <li class="navbar-item"></li>
-                            <a href="./Kontak.html">Kontak</a>
+                            <li class="navbar-item">
+                            <a href="./Kontak.html">Kontakt</a>
+                            </li>
                         </ul>
+
+                        <a href="#" id="burger">
+                            <img src="img/nav.svg" alt="">
+                        </a>
+                        </nav>
                     </div>
                 </div>
             </header>
-            <main id="main">
-                <div class="inner-wrapper">
+            <main>
+                <div class="main inner-wrapper">
                     <p class="h1">Bestellen Sie bei uns</p>
+                    <div class="adresse">
                     <address>
                         <span>Bakery GmbH</span>
                         <span>Salzburgerstraße 55</span>
                         <span>5620 Schwarzach</span>
                         <span>Österreich</span>
-                        <br />
+                        <br>
                         <span>Tel. +43 6415 422 42 80</span>
                         <span>E-Mail: bakery@example.com</span>
                     </address>
+                    </div>
 
                     <div id="Formular" class="inner-wrapper">
-                        <form action="/action_page.php" target="_self">
+                        <form action="index.html" target="_self">
                             <input
                                 type="radio"
                                 id="Herr"
@@ -163,53 +175,54 @@
                                 value="Firma"
                             />
                             <label for="Firma">Firma</label>
-                            <br />
-                            <br />
-                            <label for="name">Name:</label><br />
+                            <br>
+                            <br>
+                            <label for="name">Name:</label><br>
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
                                 placeholder="Name"
-                            /><br />
-                            <label for="email">E-mailadresse:</label><br />
+                            /><br>
+                            <label for="email">E-mailadresse:</label><br>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
                                 placeholder="Your e-mail.."
                                 value=""
-                            /><br />
-                            <label for="betreff">Betreff:</label><br />
+                            /><br>
+                            <label for="betreff">Betreff:</label><br>
                             <input
                                 type="text"
                                 id="betreff"
                                 name="betreff"
                                 placeholder="Name.."
                                 value=""
-                            /><br />
+                            /><br>
                             <label for="Lieferdatum">Wunsch-Lieferdatum:</label
-                            ><br />
+                            ><br>
                             <input
                                 type="date"
                                 id="Lieferdatum"
                                 name="Lieferdatum"
                                 value=""
-                            /><br />
-                            <label for="Nachricht">Nachricht:</label><br />
+                            /><br>
+                            <label for="Nachricht">Nachricht:</label><br>
                             <input
                                 type="text"
                                 id="nachricht"
                                 name="Nachricht"
                                 value=""
-                            /><br /><br />
-                            <input type="submit" value="Submit" />
+                            /><br><br>
+                            <input type="submit" value="Submit">
                         </form>
                     </div>
+                </div>
 
                     <div class="container inner-wrapper">
                         <h2>Anfahrtsplan</h2>
-                        <img src="./img/content/download.jpeg" alt="" />
+                        <img src="img/content/full/download.jpeg" alt="">
                     </div>
                 </div>
             </main>
@@ -221,7 +234,7 @@
                         <span>Salzburgerstraße 55</span>
                         <span>5620 Schwarzach</span>
                         <span>Österreich</span>
-                        <br />
+                        <br>
                         <span>Tel. +43 6415 422 42 80</span>
                         <span>E-Mail: bakery@example.com</span>
                     </address>
