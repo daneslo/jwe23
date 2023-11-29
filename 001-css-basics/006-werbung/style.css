@@ -1,0 +1,119 @@
+@font-face {
+    font-family: segoe UI;
+    src: url(Fonts/segoeui.ttf);
+}
+
+html,
+body {
+    font-family: segoe UI;
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+}
+:root {
+    --pink: #f49c9c;
+    --grey: #888888;
+    --lightgreen: #89d46f;
+    --lightpink: #eca49c;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+.inner-wrapper {
+    width: 100%;
+    max-width: 414px;
+    margin: 0 auto;
+    padding: 25px;
+    position: relative;
+}
+.inner-wrapper:first-child {
+    height: calc(100vh -100px);
+    min-height: 600px;
+}
+
+h1 {
+    font-size: 85px;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0.25em 0;
+    color: var(--lightpink);
+}
+
+#subheader {
+    color: var(--lightpink);
+    font-size: 18px;
+}
+#row {
+    font-size: 18px;
+    text-align: left;
+    color: var(--grey);
+    font: normal;
+    letter-spacing: 6.93px;
+}
+
+#container {
+    display: inline-block;
+    background-color: var(--grey);
+    font-size: 12px;
+    text-align: right;
+    color: #ffff;
+    padding: 0.5em;
+    padding-left: 25px;
+    letter-spacing: 0.4em;
+    margin-left: -25px;
+}
+
+#circle {
+    background: black;
+    color: white;
+    font-weight: bold;
+    font-size: 37px;
+    width: 166px;
+    height: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    z-index: 10;
+}
+
+#banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--pink);
+    width: 100%;
+    height: 72px;
+}
+#woman {
+    display: block;
+    width: 267px;
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+    z-index: 20;
+}
+
+button {
+    background: var(--lightgreen);
+    padding: 0.55em 0.55em;
+    font-size: 20px;
+    font-family: segoe UI;
+    font-weight: bold;
+    color: white;
+    width: calc(100% - 25px - 25px);
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: none;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
