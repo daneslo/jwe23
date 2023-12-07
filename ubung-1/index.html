@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubung-1</title>
+    <style>
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #95E2FF;
+    height: 100%;
+}
+.sonne{
+    background-color: #FFBA00;
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: calc(172px - (152px/2));
+    left: 10%;
+}
+.banner{
+    background-color:#C7B49B ;
+    width: 100%;
+    height: 172px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+#baum{
+    position:absolute;
+    right: 15%;
+    top: 66%;
+    border: 1px dashed orange;
+
+}
+#baum .top{
+     background-color:#259025 ;
+     width: 92px;
+     height: 92px;
+     border-radius: 50%;
+     position: absolute;
+     top: 0;
+     right: 0;
+     z-index: 3;
+  
+}
+#baum .trunk{
+     background-color:#8D5730 ;
+    width: 15px;
+    height: 81px;
+    position: absolute;
+    top: 70px;
+    right: 38px;
+}
+
+#wolke {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    right: 38px;
+}
+#wolke > *{
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+#wolke .teil-1{
+    width: 254px;
+    height: 105px;
+    top: 45px;
+    left: 20px;
+
+}
+#wolke .teil-2{
+    width: 181px;
+    height: 75px;
+    top: 105px;
+    left: 20px;
+}
+#wolke .teil-3{
+    width:181px ;
+    height: 75px;
+    top: 73px;
+    left: -33px;
+}
+    </style>
+</head>
+<body>
+    
+        <div id="wolke">
+            <div class="teil-1"></div>
+            <div class="teil-2"></div>
+            <div class="teil-3"></div>
+
+        </div>
+        <div class="sonne"></div>
+        <div class="banner"></div>
+        
+        <div id="baum">
+            <div class="top"></div>
+            <div class="trunk"></div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
