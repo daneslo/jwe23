@@ -17,6 +17,9 @@ document.body.innerHTML = dynamischesHTML;
 let showMyListInConsole = function(){
     console.log(myList);
 };
+let getTextFromHtmlInput = function (){
+    console.log(document.querySelector("input#newItem").value);
+};
 
 
 
