@@ -7,26 +7,25 @@
     <link rel="stylesheet" href="../vendor/bootstrap-5.3.2-dist/css/bootstrap.css">
     <style>
      #ampel {
-    background:#050;
-    height:150px;
-    margin:44px;
-    width:50px;
-    border-color: black;
-    border: 2px;
+    background-color: darkgreen;
+    border: 2px solid black;
+    width: 60px;
+    padding: 5px;
+    margin-bottom: 5px;
     }
 
     #ampel div {
     
-    border-radius:13px;
-    height:26px;
-    margin:4px 4px 0 4px;
-    opacity:0.3;
-    width:30px;
-    align-items: center;
-    border: black;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border-radius: 50%;
+    border: 2px solid black;
     }
 
-    #ampel .an {opacity:1;}
+    #ampel .an {
+    opacity:1;
+    }
 
 
    #ampel-rot {
@@ -42,7 +41,7 @@
   }
 
   #ampel-orange {
-  background:#fc0;
+  background: orange;
   border: black;
   }
 
@@ -67,6 +66,7 @@
             <div class="row">
                 <div class="col">
                     <small>0 =rot, 1 = gelb, 2 = grün</small>
+                    <h1>Ampel</h1>
                     <div id="ampel">
                         <div id="ampel-rot"></div>
                         <div id="ampel-orange"></div>

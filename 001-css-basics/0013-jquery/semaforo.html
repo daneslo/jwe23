@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ampel</title>
+    <style>
+        .kasten {
+    background-color: gray;
+    width: 50px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.lampe {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.rot {
+    background-color: red;
+}
+
+.gelb {
+    background-color: yellow;
+}
+
+.gruen {
+    background-color: greenyellow;
+}
+
+.aus {
+    background-color: black;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Ampel</h1>
+    <div class="kasten">
+        <div id="lampeRot" class="lampe rot"></div>
+        <div id="lampeGelb" class="lampe aus"></div>
+        <div id="lampeGruen" class="lampe aus"></div>
+    </div>
+    <button id="buttonWeiter">Weiter</button>
+    <script src="semaforo.js"></script>
+</body>
+
+</html>
