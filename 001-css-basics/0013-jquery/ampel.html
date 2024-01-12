@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ampel</title>
+    <link rel="stylesheet" href="../vendor/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <style>
+     #ampel {
+    background:#050;
+    height:150px;
+    margin:44px;
+    width:50px;
+    border-color: black;
+    border: 2px;
+    }
+
+    #ampel div {
+    
+    border-radius:13px;
+    height:26px;
+    margin:4px 4px 0 4px;
+    opacity:0.3;
+    width:30px;
+    align-items: center;
+    border: black;
+    }
+
+    #ampel .an {opacity:1;}
+
+
+   #ampel-rot {
+  background:#f00;
+  border: black;
+  align-content: center;
+  transition:opacity 2s step-end;
+  }
+
+  @keyframes an-aus {
+  from {opacity:1;}
+  to {opacity:0.3;}
+  }
+
+  #ampel-orange {
+  background:#fc0;
+  border: black;
+  }
+
+  .orange-an-aus {
+  animation: an-aus 2s step-end;
+  }
+
+  #ampel-gruen {
+  background:#0f0;
+  border: black;
+
+  }
+  #ampel-gelb {
+    background: yellow;
+  }
+  
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <small>0 =rot, 1 = gelb, 2 = grün</small>
+                    <div id="ampel">
+                        <div id="ampel-rot"></div>
+                        <div id="ampel-orange"></div>
+                         <div id="ampel-gruen" class="an"></div>
+                         <div id="ampel-gelb"></div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div></div>
+        <script src="../vendor/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+        <script src="../vendor/jquery/jquery-3.7.1.js"></script>
+        <script src="ampel.js"></script>
+</body>
+</html>
