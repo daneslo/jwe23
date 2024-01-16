@@ -1,11 +1,11 @@
 const settings = {
     states: [
-        ("#ampel-rot", // rot
-        "#ampel-orange", // rot+gelb
-        "#ampel-gruen", // grün
-        "#ampel-gelb", )// gelb
+        ("0", // rot
+        "01", //rot,gelb
+        "2", // grün
+        "1", )// gelb
     ],
-    state: "#ampel-gruen", // wir starten mit grün
+    state: "2", // wir starten mit grün
     duration: {
         red: 10, // sekunden zeit die die ampel rot ist
         green: 5, // sekunden zeit die die ampel grün ist
@@ -37,7 +37,7 @@ const fromRedToGreen = function () {
         }, 1000);
     }, 1000);
 };
-
+//document.querySelector('#ampel').setAttribute('class', "state-" + settings.state)
 window.setInterval(function () {
     $("#ampel").text(settings.state);
 }, 1000);

@@ -30,7 +30,7 @@
 
    #ampel-rot {
   background:#f00;
-  border: black;
+  border: 2px solid black;
   align-content: center;
   transition:opacity 2s step-end;
   }
@@ -39,24 +39,19 @@
   from {opacity:1;}
   to {opacity:0.3;}
   }
+}
+  #ampel-gelb {
+    background: yellow;
+    border: 2px solid black;
 
-  #ampel-orange {
-  background: orange;
-  border: black;
-  }
-
-  .orange-an-aus {
-  animation: an-aus 2s step-end;
   }
 
   #ampel-gruen {
   background:#0f0;
-  border: black;
+  border: 2px solid black;
 
   }
-  #ampel-gelb {
-    background: yellow;
-  }
+  
   
     </style>
 </head>
@@ -67,11 +62,11 @@
                 <div class="col">
                     <small>0 =rot, 1 = gelb, 2 = grün</small>
                     <h1>Ampel</h1>
-                    <div id="ampel">
-                        <div id="ampel-rot"></div>
-                        <div id="ampel-orange"></div>
-                         <div id="ampel-gruen" class="an"></div>
-                         <div id="ampel-gelb"></div>
+                    <div class="ampel" class="state-2">
+                        <div class="rot"></div>
+                        <div class="gelb"></div>
+                         <div class="gruen"></div>
+                         
                     </div>
 
                     
