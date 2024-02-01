@@ -30,13 +30,15 @@
   margin-bottom: 20px;
 }
 
-ul {
-
-}
-
-li {
-
-}
+button.answer-btn {
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid transparent;
+            }
+button.answer-btn:hover:not([disabled]) {
+  border: 1px solid grey;
+  cursor: pointer;
+            }
 
 button {
   padding: 10px 20px;
@@ -58,14 +60,14 @@ button:hover {
     
     <div id="quiz-container">
         <h1>Quiz Spiel</h1>
-        <div id="question-container">
-          <p id="question-text"></p>
-          <ul id="answer-list">
-            
-          </ul>
-        </div>
+        <div id="question"></div>
+
+        <div id="answers"></div>
+
+        <div id="result"></div>
+
         <button id="next-btn">Nächste Frage</button>
-        <p id="result"></p>
+       
       </div>
 
     <script src="../vendor/jquery/jquery-3.7.1.js"></script>
