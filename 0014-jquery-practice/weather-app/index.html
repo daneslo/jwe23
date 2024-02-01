@@ -38,6 +38,7 @@
                 </div>
             </div>
         </div>
+        <script src="../vendor/jquery/jquery-3.7.1.js"></script>
         <script>
             const apiKey = "0700af35724724f6d1e1f21d00102db3";
             const apiUrl =
@@ -67,15 +68,15 @@
                         data.wind.speed + " km/h";
 
                     if (data.weather[0].main == "Clouds") {
-                        weatherIcon.src = "images/clouds.png";
+                        weatherIcon.src = "img/clouds.png";
                     } else if (data.weather[0].main == "Clear") {
-                        weatherIcon.src = "images/clear.png";
+                        weatherIcon.src = "img/clear.png";
                     } else if (data.weather[0].main == "Rain") {
-                        weatherIcon.src = "images/rain.png";
+                        weatherIcon.src = "img/rain.png";
                     } else if (data.weather[0].main == "Drizzle") {
-                        weatherIcon.src = "images/drizzle.png";
+                        weatherIcon.src = "img/drizzle.png";
                     } else if (data.weather[0].main == "Mist") {
-                        weatherIcon.src = "images/mist.png";
+                        weatherIcon.src = "img/mist.png";
                     }
 
                     document.querySelector(".weather").style.display = "block";
@@ -87,5 +88,6 @@
                 checkWeather(searchBox.value);
             });
         </script>
+         
     </body>
 </html>

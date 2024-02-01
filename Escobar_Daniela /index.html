@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tresor</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>Open <br><span>the Safe</span></h1>
+        <img src="images/images.png" id="safe">
+      <div class="display">
+        <label for="code">Enter a Code</label>
+        <input type="text" id="code" placeholder="Code">
+
+      </div>
+      <div class="result"></div>
+    <button id="btn">
+        Open</button>
+    </div>
+
+    <script src="/vendor/jquery/jquery-3.7.1.js"></script>
+    <script>
+
+        //code for the safe
+    const DE_correctCode = "3264";
+
+        // Event-Handler for the Button
+        $("#btn").on("click", function() {
+        // Benutzereingabe lesen
+        let DE_userCode = $("#code").val();
+
+       // Validate Code
+       if (DE_userCode === DE_correctCode) {
+       // Show success message
+       showFeedback("Open Safe!", "green");
+       } else {
+       // Show error message
+        showFeedback("Wrong Code!", "red");
+       }
+   });
+
+     
+     function showFeedback(message, color) {
+     $(".result").text(message).css("color", color);
+}
+
+        
+        
+
+        
+
+      
+
+    </script>
+</body>
+</html>
