@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+        }
+
+        #circle {
+            border: 1px aolid red;
+            border-radius: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* prevents click events and selections (clicking throught the circle)*/
+            user-select: none;
+            pointer-events: none;
+            transition: all 0.3s ease ease-out;
+            mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    
+<div id="circle"></div>
+<button id="myButton">Click me!</button>
+<div>
+    <a href="https://ww.google.com" target="blank"></a>
+</div>
+
+<div id="cal">
+
+</div>
+
+    <script src="../vendor/jquery/jquery-3.7.1.js"></script>
+    <script>
+
+        $('#myButton').on('click', function () {
+            console.log("hey! you clicked me");
+        });
+        $('#myButton').click(function (){
+            console.log("Another Click!");
+        });
+
+        //event handler entfernen
+        $('#myButton').off("click");
+
+        $("a").click(function(e){
+            e.preventDefault();
+            alert('dieser Link wird von JavaScript blockiert');
+
+        });
+
+        //unterbinden von typischen Events
+        //e.preventDefault()
+
+        $('#myButton').mouseenter(function(){
+             $(this).css("border", "4px solid red");
+        });
+        $('#myButton').mouseleave(function(){
+            $(this).css('border', '4px solid green');
+        });
+
+        $('body').mouseover(function(e){
+            console.log(e.pageX, e.pageY);
+            $('#circle').css({
+                top: e.pageX,
+                left: e.pageY,
+            });
+        });
+        //change event for form elements
+        $('#cal').change(function(e){
+            console.log(new Date($(this).val()));
+        });
+    </script>
+</body>
+</html>

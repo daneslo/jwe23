@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilities
+    </title>
+</head>
+<body>
+    <ul>
+        <li>khj</li>
+        <li>bfdn</li>
+        <li>ljsd</li>
+        <li>ncdks</li>
+        <li>sdkfh</li>
+        <li>ndkskd</li>
+    </ul>
+    <div>
+        <input type="text" id="username" name="username" />
+    </div>
+     benutzer
+    <script src="../vendor/jquery/jquery-3.7.1.js"></script>
+
+    <script>
+        //each / for each
+     $('li').each(function(index){
+        console.log(
+            $(this).text());
+            $(this).css('background', 'hsl(' + index * 10 + ', 50%, 50%)');
+     });
+
+     $.each($("li"),function(){
+         
+     });
+
+     //Arrays utilities
+     let arrayMerge = $.merge([1,2,3], [4,5,6]);
+     console.log(arrayMerge);
+
+     let names = ['Harry', 'Marry', 'Kevin'];
+     let names2 = ['Barbara', 'Monica', 'Sophie'];
+
+     console.log($.merge(names, names2));
+
+     //Trimmen eines Strings, entfernen von leerzeichen vor + nach einem String
+     $("#username").vhange(function(){
+        console.log($.trim($(this).val()));
+     });
+
+
+    
+    
+    </script>
+</body>
+</html>

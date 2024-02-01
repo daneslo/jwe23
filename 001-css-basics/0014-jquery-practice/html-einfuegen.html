@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML einfuegen</title>
+</head>
+<body>
+
+    <h2>hallo</h2>
+<div class="wrapper">
+    <!-- dynamic HTML GOES HERE-->
+</div>
+
+<div id="gallery"></div>
+<div class="content">
+    öLorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat et totam dignissimos nesciunt, vitae alias at dolor ut recusandae repellendus doloremque illum hic odio excepturi aut, consequuntur saepe magni optio?
+</div>
+
+    <script src="../vendor/jquery/jquery-3.7.1.js"></script>
+    <script>
+        $('.wrapper').append(`<p class="greeting1">Hi, I am dynamic!</p>`);
+        $(`<p class="greetings2">Servus, ich bin aus Mexiko</p>`).appendTo(".wrapper");
+        $('.wrapper').prepend(`<div class="example-before">Element before other elements</div>`);
+        
+         //Elemente ändern
+        $("greetings1").attr('id', 'dynamic-1');
+        $("greetings1").attr('id', 'dynamic-2');
+        $("greetings1").removeAttr('id');
+        $("greetings1").attr('id', 'dynamic-1');
+        
+
+        $(".greetings2").css("background-color", "pink");
+        $(".greetings2").css({
+            'font-weight' : 'bold',
+            border : '2px dashed green',
+        });
+
+        $(".example-before").css("background", "lightgreen");
+
+        //classes hinzufungen/entfernen
+        $('body')
+        .addClass('js-works')
+        .addClass('btn btn-primary extra-class-dynamic')
+        .removeClass('temporary-class');
+
+        $('.greetings2').text('Wow, that changes everything!');
+        $('.greetings2').html(`<i>Wow, </i> thats awesome!`);
+
+         //umschliesen von elemente
+        for(let i = 0; i < 10; i++){
+            $('#gallery').append(
+                '<img src="https://placehold.co/600x400"/>'
+            );
+        };
+        $('#gallery img').wrap('a href="#"></a>');
+
+        $('#gallery img').each(function(index, img){
+            $(img).wrap('<a href="#"></a>')
+        });
+
+        //mehrere elemente selektieren und ändern
+        $("#gallery img").css("border","3px solid orange");
+
+        //elemente ersetzen
+        $("div.content:contains('FUCK')").replaceWith(
+            "<p>Contains bad words.</p>"
+        );
+
+        //kopieren von elemente
+        $("h2").clone().prependTo("#gallery");
+
+        //elemente entfernen
+        $('#gallery img').last().remove();
+
+
+    </script>
+</body>
+</html>

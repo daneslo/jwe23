@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="key" readonly />
+        <button>generate key</button>
+        <script>
+            const allowedChars = "hjksdhfkdsjcBNADSBFbkjdbksdjbfksSHJDF";
+            const allowedCharsLenght = allowedChars.length;
+            const keyLenght = 15;
+            const generateKey = function () {
+                let key = "";
+
+                for (let i = 0; i < keyLenght; i++) {
+                    let randomNumber = Math.floor(
+                        Math.random() * allowedCharsLenght
+                    );
+                    key += allowedChars.charAt(randomNumber);
+                }
+                document.querySelector("#key").value = key;
+            };
+            document
+                .querySelector("button")
+                .addEventListener("click", generateKey);
+
+            document
+                .querySelector("#key")
+                .addEventListener("click", function () {
+                    navigator.clipboard.writeText(this.value);
+                    console.info("Passwort in die Zwischablage kopiert");
+                    alert("Passwort in die Zwischablage kopiert");
+                });
+        </script>
+    </body>
+</html>

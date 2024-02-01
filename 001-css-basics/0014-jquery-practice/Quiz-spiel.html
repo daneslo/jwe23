@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Spiel</title>
+    <link
+    rel="stylesheet"
+    href="../vendor/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+/>
+<style>
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#quiz-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#question-container {
+  margin-bottom: 20px;
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+</style>
+</head>
+<body>
+    
+    <div id="quiz-container">
+        <h1>Quiz Spiel</h1>
+        <div id="question-container">
+          <p id="question-text"></p>
+          <ul id="answer-list">
+            
+          </ul>
+        </div>
+        <button id="next-btn">Nächste Frage</button>
+        <p id="result"></p>
+      </div>
+
+    <script src="../vendor/jquery/jquery-3.7.1.js"></script>
+    <script src="../0014-jquery-practice/quiz.js"></script>
+   
+    
+
+    
+</body>
+</html>
